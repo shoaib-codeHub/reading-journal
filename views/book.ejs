@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading-journal</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <%- include("partials/header") %>
+
+        <main>
+            <div class="book-detail-container">
+
+                <div class="book-detail-card">
+
+                    <div class="book-detail-cover">
+                        <img src="<%= book.cover_url || '/images/defaultBook.jpg' %>" alt="<%= book.title %>" />
+                    </div>
+
+                    <div class="book-detail-info">
+                        <h2 class="book-title">
+                            <%= book.title %>
+                        </h2>
+
+                        <p class="book-author">by <%= book.author %>
+                        </p>
+
+                        <% if (book.isbn) { %>
+                            <p class="book-meta">ISBN: <%= book.isbn %>
+                            </p>
+                            <% } %>
+
+                                <% if (book.date_read) { %>
+                                    <p class="book-meta">
+                                        Read on:
+                                        <%= new Date(book.date_read).toLocaleDateString("en-IN", { day: "numeric" ,
+                                            month: "short" , year: "numeric" }) %>
+                                    </p>
+                                    <% } %>
+
+                                        <div class="book-actions">
+                                            <a href="/" class="btn">← Back</a>
+
+                                            <% if (!book.rating || !book.review_text) { %>
+                                                <a href="/book/<%= book.id %>/rating" class="btn">★ Add rating</a>
+                                                <% } %>
+                                                    <a href="/book/<%= book.id %>/note" class="btn">❝ ❞ Add Notes</a>
+                                        </div>
+                                        <div class="book-reviews">
+
+                                            <% if (book.rating && book.review_text) { %>
+                                                <div class="review-card">
+                                                    <div class="review-stars">⭐ <%= book.rating %>/5</div>
+                                                    <p class="review-text">
+                                                        <%= book.review_text %>
+                                                    </p>
+                                                    <a href="/book/<%= book.id %>/rating/update" class="update-btn">★
+                                                        Update rating and review</a>
+                                                </div>
+
+                                                <% } else { %>
+
+                                                    <div class="review-empty">
+                                                        <p>No ratings yet. Add your first review ⭐</p>
+                                                    </div>
+
+                                                    <% } %>
+
+                                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="book-notes">
+
+                <h2 class="notes-title">Your Notes ✍️</h2>
+
+                <% if (notes.length) { %>
+
+                    <% notes.forEach(note=> { %>
+                        <div class="note-card">
+
+                            <p class="note-text">
+                                <%= note.note_text %>
+                            </p>
+
+                            <div class="note-meta">
+                                <small>Page: <%= note.page_number %></small>
+
+                                <div class="note-actions">
+                                    <a class="note-edit" href="/book/<%= book.id %>/note/<%= note.id %>/edit">
+                                        Edit
+                                    </a>
+
+                                    <a class="note-delete" href="/book/<%= book.id %>/note/<%= note.id %>/delete">
+                                        Delete
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <% }) %>
+
+                            <% } else { %>
+
+                                <div class="note-empty">
+                                    <p>No notes available. Add your first note 📝</p>
+                                </div>
+
+                                <% } %>
+
+            </div>
+
+        </main>
+
+        <%- include("partials/footer") %>
+</body>
+
+</html>

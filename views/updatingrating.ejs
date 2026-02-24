@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <%- include("partials/header") %>
+        <main>
+            <h1 style="display: flex; justify-content: center; align-items: center;">Update rating and review here</h1>
+            <div class="form-container">
+                <form action="/book/rating/update" method="POST" class="book-form">
+                    <input type="hidden" name="book_id" value="<%= bookId %>" />
+                    <label for="rating">Rating</label>
+                    <input type="number" name="rating" id="title" min="1" max="5" value="<%= rating?.rating || '' %>"
+                        required />
+
+                    <label for="review">Review</label>
+                    <textarea name="review_text" id="author"><%= rating?.review_text || '' %></textarea>
+
+                    <button type="submit" class="btn-primary">
+                        Save Rating
+                    </button>
+
+                </form>
+            </div>
+        </main>
+        <%- include("partials/footer") %>
+</body>
+
+</html>

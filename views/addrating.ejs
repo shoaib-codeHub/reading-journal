@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <%- include("partials/header") %>
+        <main>
+            <h1 style="display: flex; justify-content: center; align-items: center;">Add raings here</h1>
+            <div class="form-container">
+                <form action="/ratings" method="POST" class="book-form">
+
+                    <input type="hidden" name="book_id" value="<%= bookId %>" />
+
+                    <label>Rating</label>
+                    <input type="number" name="rating" min="1" max="5" id="title" required />
+
+                    <label>Review</label>
+                    <textarea name="review_text" id="author"></textarea>
+
+                    <button type="submit">Save Rating</button>
+
+                </form>
+            </div>
+        </main>
+        <%- include("partials/footer") %>
+</body>
+
+</html>

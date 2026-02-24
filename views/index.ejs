@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading-Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+        <main>
+            <div class="books-grid">
+                <% for (let book of books) { %>
+
+                    <div class="book-card">
+
+                        <a href="/books/<%= book.id %>">
+                            <img src="<%= book.cover_url || '/images/defaultBook.jpg' %>" alt="<%= book.title %>"
+                                class="book-cover" />
+                        </a>
+
+                        <div class="book-info">
+                            <h3>
+                                <%= book.title %>
+                            </h3>
+                            <p class="author">
+                                <%= book.author %>
+                            </p>
+
+                            <% if (book.isbn) { %>
+                                <p class="isbn">ISBN: <%= book.isbn %>
+                                </p>
+                                <% } %>
+                        </div>
+
+                    </div>
+
+                    <% } %>
+            </div>
+        </main>
+        <%- include('partials/footer') %>
+
+</body>
+
+</html>

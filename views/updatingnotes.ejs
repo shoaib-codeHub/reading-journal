@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <%- include("partials/header") %>
+
+    <main>
+      <h1 style="text-align:center;">Update Note</h1>
+
+      <div class="form-container">
+        <form action="/book/note/update" method="POST" class="book-form">
+
+          <input type="hidden" name="book_id" value="<%= bookId %>" />
+          <input type="hidden" name="note_id" value="<%= note.id %>" />
+
+          <label>Note</label>
+          <textarea name="note_text" required><%= note.note_text %></textarea>
+
+          <label>Page Number</label>
+          <input type="number" name="page_number" value="<%= note.page_number %>" />
+
+          <button type="submit" class="btn-primary">
+            Update Note
+          </button>
+
+        </form>
+      </div>
+    </main>
+
+    <%- include("partials/footer") %>
+</body>
+
+</html>
