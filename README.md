@@ -54,7 +54,7 @@ Ensure you have the following installed on your local machine:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/shoaib-codehub/reading-journal.git
+git clone https://github.com/shoaib-codeHub/reading-journal.git
 cd reading-journal
 ```
 2. Install dependencies
@@ -180,4 +180,5 @@ Made with 💖 by Shoaib - GitHub: @shoaib-codehub
 
 📜 License
 This project is open-source and available under the MIT License for learning and development purposes.
+
 
