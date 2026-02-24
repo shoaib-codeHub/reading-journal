@@ -123,6 +123,8 @@ npm run dev
 ```
 Open your browser and navigate to: http://localhost:3000
 
+📁 Folder structure
+```
 reading-journal/
 │
 ├── config/
@@ -150,8 +152,9 @@ reading-journal/
 ├── .gitignore
 ├── package.json
 └── server.js                 # Main Express application & routes
-
+```
 🔄 Core Learning Concepts Demonstrated
+```
 RESTful Routing: Standardized HTTP methods (GET, POST) for resource management.
 
 MVC Architecture Pattern: Separation of concerns using routing logic, database configurations, and EJS views.
@@ -161,9 +164,10 @@ Relational Database Design: Implementing LEFT JOIN queries and handling One-to-O
 API Integration: Using Axios to dynamically fetch external JSON data from the Open Library API.
 
 Dynamic Templating: Server-side rendering with EJS for passing backend data to the frontend.
-
+```
 
 🔮 Future Improvements
+```
 [ ] Authentication: Add user login/signup to support multiple users.
 
 [ ] Reading Analytics: A dashboard showing books read per month, favorite authors, etc.
@@ -173,6 +177,7 @@ Dynamic Templating: Server-side rendering with EJS for passing backend data to t
 [ ] Pagination: Add page numbers to the home page for users with large libraries.
 
 [ ] Dark Mode Toggle: User-selectable light and dark themes.
+```
 ---
 
 ## ✨ Author
@@ -185,4 +190,5 @@ Dynamic Templating: Server-side rendering with EJS for passing backend data to t
 
 
 ---
+
 
