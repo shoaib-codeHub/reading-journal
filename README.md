@@ -41,7 +41,6 @@ Reading Journal is a full-stack web application that allows students to track th
 
 ---
 
-## 📁 Project Structure
 ## 📁 Folder Structure
 
 reading-journal/
@@ -124,3 +123,4 @@ Made with 💖 by Shoaib
 ## 📜 License
 
 Open source for learning purposes.
+
