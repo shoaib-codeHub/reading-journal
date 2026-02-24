@@ -175,10 +175,11 @@ Dynamic Templating: Server-side rendering with EJS for passing backend data to t
 [ ] Dark Mode Toggle: User-selectable light and dark themes.
 
 
-👨‍💻 Author
-Made with 💖 by Shoaib - GitHub: @shoaib-codehub
+##👨‍💻 Author
+-Made with 💖 by Shoaib - GitHub: @shoaib-codehub
 
-📜 License
-This project is open-source and available under the MIT License for learning and development purposes.
+##📜 License
+-This project is open-source and available under the MIT License for learning and development purposes.
+
 
 
