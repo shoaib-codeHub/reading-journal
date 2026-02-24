@@ -74,11 +74,13 @@ DB_HOST=localhost
 DB_NAME=reading_journal
 DB_PASSWORD=your_postgres_password
 DB_PORT=5432
-
+---
 4. Database Setup
 Open your PostgreSQL command line (psql) or a GUI like pgAdmin, and run the following SQL commands to set up the necessary tables:
-
+---
 -- Create the database
+---
+```
 CREATE DATABASE reading_journal;
 
 -- Connect to the database
@@ -108,7 +110,8 @@ CREATE TABLE notes (
     note_text TEXT NOT NULL,
     page_number INTEGER
 );
-
+```
+---
 5. Run the server
 You can start the server in production mode or development mode (using nodemon).
 
@@ -190,5 +193,6 @@ Dynamic Templating: Server-side rendering with EJS for passing backend data to t
 
 
 ---
+
 
 
