@@ -173,13 +173,16 @@ Dynamic Templating: Server-side rendering with EJS for passing backend data to t
 [ ] Pagination: Add page numbers to the home page for users with large libraries.
 
 [ ] Dark Mode Toggle: User-selectable light and dark themes.
+---
 
+## ✨ Author
 
-##👨‍💻 Author
 -Made with 💖 by Shoaib - GitHub: @shoaib-codehub
 
-##📜 License
+## ✨ Licence 
+
 -This project is open-source and available under the MIT License for learning and development purposes.
 
 
+---
 
